@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="CoBuild - a student collaboration and project management platform."
+    />
+    <title>CoBuild | Build better projects, together</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main-content">Skip to dashboard</a>
+
+    <div class="app-shell">
+      <!-- Sidebar -->
+      <aside class="sidebar" aria-label="Primary navigation">
+        <a class="brand" href="#dashboard" aria-label="CoBuild home">
+          <span class="brand-mark" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </span>
+          <span>CoBuild</span>
+        </a>
+
+        <nav class="nav-menu">
+          <p class="nav-label">Workspace</p>
+          <a class="nav-item active" href="#dashboard" aria-current="page">
+            <span aria-hidden="true">⌘</span> Overview
+          </a>
+          <a class="nav-item" href="#my-projects">
+            <span aria-hidden="true">◫</span> My projects
+            <span class="nav-badge">3</span>
+          </a>
+          <a class="nav-item" href="#find-teammates">
+            <span aria-hidden="true">◎</span> Find teammates
+          </a>
+          <a class="nav-item" href="#messages">
+            <span aria-hidden="true">✦</span> Messages
+            <span class="nav-badge accent">2</span>
+          </a>
+
+          <p class="nav-label">Manage</p>
+          <a class="nav-item" href="#tasks"><span aria-hidden="true">✓</span> Tasks</a>
+          <a class="nav-item" href="#calendar"><span aria-hidden="true">□</span> Calendar</a>
+          <a class="nav-item" href="#insights"><span aria-hidden="true">↗</span> Insights</a>
+        </nav>
+
+        <div class="sidebar-bottom">
+          <a class="help-card" href="#help">
+            <span class="help-icon" aria-hidden="true">?</span>
+            <span>
+              <strong>Need a hand?</strong>
+              <small>Explore project guides</small>
+            </span>
+          </a>
+          <button class="profile-switcher" type="button" aria-label="Open profile menu">
+            <span class="avatar avatar-small avatar-owner">AK</span>
+            <span class="profile-name">Aarav Kumar<small>Student builder</small></span>
+            <span aria-hidden="true">⌄</span>
+          </button>
+        </div>
+      </aside>
+
+      <div class="page-area">
+        <!-- Top bar -->
+        <header class="topbar">
+          <button class="mobile-menu" type="button" aria-label="Open navigation">☰</button>
+          <label class="search-box">
+            <span aria-hidden="true">⌕</span>
+            <input type="search" placeholder="Search people, projects or tasks..." />
+            <kbd>⌘ K</kbd>
+          </label>
+          <div class="topbar-actions">
+            <button class="icon-button" type="button" aria-label="View notifications">
+              <span aria-hidden="true">♧</span><span class="notification-dot"></span>
+            </button>
+            <button class="create-button" type="button">
+              <span aria-hidden="true">+</span> Create project
+            </button>
+          </div>
+        </header>
+
+        <main id="main-content" class="dashboard">
+          <!-- Welcome -->
+          <section class="welcome-row" id="dashboard" aria-labelledby="welcome-title">
+            <div>
+              <p class="eyebrow">TUESDAY, 13 OCTOBER</p>
+              <h1 id="welcome-title">Good morning, Aarav <span aria-hidden="true">✦</span></h1>
+              <p class="subtitle">You have <strong>4 focused tasks</strong> to move forward today.</p>
+            </div>
+            <div class="focus-streak" aria-label="7 day focus streak">
+              <span class="streak-icon" aria-hidden="true">✺</span>
+              <span><strong>7 day streak</strong><small>Keep the momentum going</small></span>
+            </div>
+          </section>
+
+          <!-- Dashboard metrics; demo values should come from the user's real project data later. -->
+          <section class="metric-grid" aria-label="Project overview">
+            <article class="metric-card">
+              <span class="metric-icon purple" aria-hidden="true">◫</span>
+              <div><p>Active projects</p><strong>03</strong></div>
+              <span class="metric-trend positive">+1 this month</span>
+            </article>
+            <article class="metric-card">
+              <span class="metric-icon orange" aria-hidden="true">✓</span>
+              <div><p>Tasks completed</p><strong>24</strong></div>
+              <span class="metric-trend">of 32 this week</span>
+            </article>
+            <article class="metric-card">
+              <span class="metric-icon blue" aria-hidden="true">◉</span>
+              <div><p>Team health</p><strong>92<span>%</span></strong></div>
+              <span class="metric-trend positive">Looking strong</span>
+            </article>
+            <article class="metric-card">
+              <span class="metric-icon green" aria-hidden="true">↗</span>
+              <div><p>Build hours</p><strong>18.5</strong></div>
+              <span class="metric-trend positive">+4.2 vs last week</span>
+            </article>
+          </section>
+
+          <section class="content-grid">
+            <!-- Active project -->
+            <article class="panel featured-project" id="my-projects">
+              <div class="panel-heading">
+                <div>
+                  <p class="eyebrow">IN FOCUS</p>
+                  <h2>Campus Cart</h2>
+                  <p>A peer-to-peer marketplace for campus essentials.</p>
+                </div>
+                <button class="more-button" type="button" aria-label="More project options">•••</button>
+              </div>
+
+              <div class="project-meta">
+                <span class="status-pill active-status"><i></i> In progress</span>
+                <span><span aria-hidden="true">□</span> Due in 12 days</span>
+                <span><span aria-hidden="true">◷</span> 18h logged</span>
+              </div>
+
+              <div class="progress-overview">
+                <div class="progress-head"><span>Overall progress</span><strong>68%</strong></div>
+                <div class="progress-track" aria-label="Project completion: 68 percent"><span style="width: 68%"></span></div>
+                <div class="progress-labels"><span>Research</span><span>Build</span><span>Launch</span></div>
+              </div>
+
+              <div class="project-footer">
+                <div class="member-group" aria-label="Project team">
+                  <span class="avatar avatar-owner" title="Aarav Kumar">AK</span>
+                  <span class="avatar avatar-blue" title="Maya Shah">MS</span>
+                  <span class="avatar avatar-yellow" title="Rohan Mehta">RM</span>
+                  <span class="avatar avatar-pink" title="Isha Patel">IP</span>
+                  <button class="add-member" type="button" aria-label="Invite a teammate">+</button>
+                  <span class="member-count">4 members</span>
+                </div>
+                <a class="text-link" href="#project-board">Open project <span aria-hidden="true">→</span></a>
+              </div>
+            </article>
+
+            <!-- Daily focus -->
+            <section class="panel daily-focus" id="tasks" aria-labelledby="focus-title">
+              <div class="panel-heading compact">
+                <div><p class="eyebrow">TODAY</p><h2 id="focus-title">Your focus list</h2></div>
+                <button class="icon-button soft" type="button" aria-label="Add a task">+</button>
+              </div>
+              <ul class="task-list">
+                <li>
+                  <label class="task-check"><input type="checkbox" /><span></span></label>
+                  <div><strong>Review onboarding screens</strong><small>Campus Cart · Design</small></div>
+                  <time datetime="2026-10-13T12:00">12:00 PM</time>
+                </li>
+                <li>
+                  <label class="task-check"><input type="checkbox" /><span></span></label>
+                  <div><strong>Interview 3 potential users</strong><small>Campus Cart · Research</small></div>
+                  <time class="urgent" datetime="2026-10-13T15:30">3:30 PM</time>
+                </li>
+                <li>
+                  <label class="task-check"><input type="checkbox" /><span></span></label>
+                  <div><strong>Update API documentation</strong><small>StudySync · Engineering</small></div>
+                  <time datetime="2026-10-13T17:00">5:00 PM</time>
+                </li>
+              </ul>
+              <a class="text-link all-tasks" href="#all-tasks">View all tasks <span aria-hidden="true">→</span></a>
+            </section>
+          </section>
+
+          <section class="lower-grid">
+            <!-- Smart matching -->
+            <section class="panel matches-panel" id="find-teammates" aria-labelledby="matches-title">
+              <div class="panel-heading compact">
+                <div>
+                  <p class="eyebrow">SMART MATCHING</p>
+                  <h2 id="matches-title">People worth meeting</h2>
+                </div>
+                <a class="text-link" href="#all-matches">See all <span aria-hidden="true">→</span></a>
+              </div>
+              <p class="section-intro">Matched to your goals, required skills and preferred working rhythm.</p>
+
+              <div class="match-list">
+                <article class="match-card">
+                  <span class="avatar avatar-large avatar-purple">NK</span>
+                  <div class="match-main">
+                    <div class="match-name"><h3>Naina Kapoor</h3><span class="match-score">96% match</span></div>
+                    <p>UI/UX Designer · 2nd year</p>
+                    <div class="tag-row"><span>Figma</span><span>User research</span><span>Available 8h/wk</span></div>
+                  </div>
+                  <button class="outline-button" type="button">Connect</button>
+                </article>
+                <article class="match-card">
+                  <span class="avatar avatar-large avatar-teal">VD</span>
+                  <div class="match-main">
+                    <div class="match-name"><h3>Vihaan Desai</h3><span class="match-score">91% match</span></div>
+                    <p>Full-stack Developer · 3rd year</p>
+                    <div class="tag-row"><span>React</span><span>Python</span><span>Available 6h/wk</span></div>
+                  </div>
+                  <button class="outline-button" type="button">Connect</button>
+                </article>
+                <article class="match-card">
+                  <span class="avatar avatar-large avatar-coral">SP</span>
+                  <div class="match-main">
+                    <div class="match-name"><h3>Sana Prakash</h3><span class="match-score">89% match</span></div>
+                    <p>Growth &amp; Content · 2nd year</p>
+                    <div class="tag-row"><span>Marketing</span><span>Writing</span><span>Available 10h/wk</span></div>
+                  </div>
+                  <button class="outline-button" type="button">Connect</button>
+                </article>
+              </div>
+            </section>
+
+            <!-- Team commitment / transparency -->
+            <section class="panel team-pulse" id="insights" aria-labelledby="pulse-title">
+              <div class="panel-heading compact">
+                <div><p class="eyebrow">CAMPUS CART</p><h2 id="pulse-title">Team pulse</h2></div>
+                <button class="more-button" type="button" aria-label="More team health options">•••</button>
+              </div>
+              <div class="pulse-score">
+                <div class="score-ring" style="--score: 92"><strong>92</strong><span>/100</span></div>
+                <div><strong>Great momentum</strong><p>Everyone has checked in this week.</p></div>
+              </div>
+              <ul class="pulse-list">
+                <li><span>Weekly check-ins</span><strong>4/4</strong><span class="mini-bar"><i style="width: 100%"></i></span></li>
+                <li><span>Tasks on track</span><strong>12/14</strong><span class="mini-bar"><i style="width: 86%"></i></span></li>
+                <li><span>Meeting attendance</span><strong>100%</strong><span class="mini-bar"><i style="width: 100%"></i></span></li>
+              </ul>
+              <button class="full-width-button" type="button">Send weekly check-in</button>
+            </section>
+          </section>
+
+          <!-- Project workflow: captures the starting point, matching, delivery and learning loop. -->
+          <section class="workflow-section" id="project-board" aria-labelledby="workflow-title">
+            <div class="section-heading">
+              <div><p class="eyebrow">BUILD WITH CLARITY</p><h2 id="workflow-title">A project flow that keeps teams moving</h2></div>
+              <button class="create-button" type="button"><span aria-hidden="true">+</span> Start a new project</button>
+            </div>
+            <div class="workflow-grid">
+              <article class="workflow-card">
+                <span class="step-number">01</span>
+                <span class="workflow-icon" aria-hidden="true">◌</span>
+                <h3>Frame the idea</h3>
+                <p>Define the problem, your audience, outcome and the skills your project needs.</p>
+                <a href="#project-brief">Create a project brief <span aria-hidden="true">→</span></a>
+              </article>
+              <article class="workflow-card">
+                <span class="step-number">02</span>
+                <span class="workflow-icon" aria-hidden="true">◎</span>
+                <h3>Choose the right team</h3>
+                <p>Compare skill fit, availability, goals and commitment before inviting people.</p>
+                <a href="#find-teammates">Find collaborators <span aria-hidden="true">→</span></a>
+              </article>
+              <article class="workflow-card">
+                <span class="step-number">03</span>
+                <span class="workflow-icon" aria-hidden="true">✓</span>
+                <h3>Plan and ship</h3>
+                <p>Turn the work into milestones, shared tasks and short weekly check-ins.</p>
+                <a href="#tasks">Open task board <span aria-hidden="true">→</span></a>
+              </article>
+              <article class="workflow-card">
+                <span class="step-number">04</span>
+                <span class="workflow-icon" aria-hidden="true">↗</span>
+                <h3>Reflect and improve</h3>
+                <p>Capture what worked, what stalled and what your next version should change.</p>
+                <a href="#reflection">Add a reflection <span aria-hidden="true">→</span></a>
+              </article>
+            </div>
+          </section>
+
+          <!-- Project creation form: the future Python backend can store this data. -->
+          <section class="project-brief panel" id="project-brief" aria-labelledby="brief-title">
+            <div class="brief-intro">
+              <p class="eyebrow">NEW PROJECT</p>
+              <h2 id="brief-title">Turn a rough idea into a shared plan</h2>
+              <p>Answer a few focused questions. CoBuild will turn them into a clear brief and teammate criteria.</p>
+              <ul>
+                <li><span aria-hidden="true">✓</span> Define a problem, not just a feature</li>
+                <li><span aria-hidden="true">✓</span> Set a realistic outcome for this week</li>
+                <li><span aria-hidden="true">✓</span> Invite based on skills and time, not only friendship</li>
+              </ul>
+            </div>
+            <form class="brief-form">
+              <label>Project title<input type="text" name="project_title" placeholder="e.g. Campus Cart" required /></label>
+              <label>Who are you helping?<input type="text" name="audience" placeholder="e.g. Students moving into hostel" /></label>
+              <label>What problem will you solve?<textarea name="problem" rows="3" placeholder="Describe the issue in one clear sentence."></textarea></label>
+              <div class="two-columns">
+                <label>Project category<select name="category"><option value="">Select a category</option><option>Web / App</option><option>Campus initiative</option><option>Research</option><option>Creative project</option></select></label>
+                <label>Target date<input type="date" name="target_date" /></label>
+              </div>
+              <fieldset>
+                <legend>Skills you need</legend>
+                <label class="chip-check"><input type="checkbox" name="skills" value="design" /><span>Design</span></label>
+                <label class="chip-check"><input type="checkbox" name="skills" value="development" /><span>Development</span></label>
+                <label class="chip-check"><input type="checkbox" name="skills" value="research" /><span>Research</span></label>
+                <label class="chip-check"><input type="checkbox" name="skills" value="marketing" /><span>Marketing</span></label>
+              </fieldset>
+              <button class="create-button" type="submit">Generate project brief <span aria-hidden="true">→</span></button>
+            </form>
+          </section>
+        </main>
+
+        <footer class="app-footer">
+          <span>CoBuild prototype · Built for student teams</span>
+          <span>Use only the information people choose to share.</span>
+        </footer>
+      </div>
+    </div>
+
+    <!-- JavaScript interactions and Python/API integration will be added after CSS. -->
+  </body>
+</html>
